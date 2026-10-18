@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "FAP GPA Calculator - Tính Điểm GPA FPT",
+  "version": "1.0.0",
+  "description": "Tự động tính GPA tích lũy, GPA từng kỳ, tổng tín chỉ và dự đoán điểm mục tiêu trên FAP FPT University.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icons/icon48.png",
+    "default_title": "FAP GPA Calculator"
+  },
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "*://*.fpt.edu.vn/*",
+    "*://fpt.edu.vn/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.fpt.edu.vn/Report/Transcript*",
+        "*://fpt.edu.vn/Report/Transcript*"
+      ],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}

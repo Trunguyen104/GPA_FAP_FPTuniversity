@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Bảng Điểm FAP</title>
+    <!-- FAP Bootstrap Mock Styles for Testing -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="content.css">
+    <style>
+        body { background: #f4f6f9; padding: 20px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        .fap-sheet { background: #fff; border-radius: 8px; }
+    </style>
+</head>
+<body class="show">
+    <div class="container my-4">
+        <h3 class="mb-3">Báo cáo bảng điểm transcript BIT_SE_NET_19B - FAP Test Page</h3>
+        <div class="d-flex justify-content-end mb-3">
+            <button class="btn btn-primary">Xuất PDF</button>
+        </div>
+
+        <div class="card mb-3">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover align-middle mb-0 fap-sheet fap-table--stack" data-fap-table-cards="1">
+                        <thead class="table-light">
+                            <tr>
+                                <th class="text-center">STT</th>
+                                <th class="text-center">KỲ</th>
+                                <th class="text-center">HỌC KỲ</th>
+                                <th class="text-center">MÃ MÔN</th>
+                                <th class="text-center">TIÊN QUYẾT</th>
+                                <th class="text-center">MÔN THAY THẾ</th>
+                                <th>TÊN MÔN</th>
+                                <th class="text-center">TÍN CHỈ</th>
+                                <th class="text-center">ĐIỂM</th>
+                                <th class="text-center">TRẠNG THÁI</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-center" data-label="STT">1</td>
+                                <td class="text-center" data-label="KỲ">-3</td>
+                                <td class="text-center" data-label="HỌC KỲ">Fall2023</td>
+                                <td class="text-center" data-label="MÃ MÔN">ENT203</td>
+                                <td class="text-center" data-label="TIÊN QUYẾT">ENT104</td>
+                                <td class="text-center" data-label="MÔN THAY THẾ">-</td>
+                                <td data-label="TÊN MÔN">Topnotch 2</td>
+                                <td class="text-center" data-label="TÍN CHỈ">0</td>
+                                <td class="text-center" data-label="ĐIỂM"><span class="badge bg-success">7,2</span></td>
+                                <td class="text-center" data-label="TRẠNG THÁI"><span class="badge bg-success">Đạt</span></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center" data-label="STT">2</td>
+                                <td class="text-center" data-label="KỲ">-2</td>
+                                <td class="text-center" data-label="HỌC KỲ">Fall2023</td>
+                                <td class="text-center" data-label="MÃ MÔN">ENT303</td>
+                                <td class="text-center" data-label="TIÊN QUYẾT">ENT203</td>
+                                <td class="text-center" data-label="MÔN THAY THẾ">-</td>
+                                <td data-label="TÊN MÔN">Topnotch 3</td>
+                                <td class="text-center" data-label="TÍN CHỈ">0</td>
+                                <td class="text-center" data-label="ĐIỂM"><span class="badge bg-success">6,6</span></td>
+                                <td class="text-center" data-label="TRẠNG THÁI"><span class="badge bg-success">Đạt</span></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center" data-label="STT">3</td>
+                                <td class="text-center" data-label="KỲ">-1</td>
+                                <td class="text-center" data-label="HỌC KỲ">Spring2024</td>
+                                <td class="text-center" data-label="MÃ MÔN">ENT403</td>
+                                <td class="text-center" data-label="TIÊN QUYẾT">ENT303</td>
+                                <td class="text-center" data-label="MÔN THAY THẾ">-</td>
+                                <td data-label="TÊN MÔN">Summit 1</td>
+                                <td class="text-center" data-label="TÍN CHỈ">0</td>
+                                <td class="text-center" data-label="ĐIỂM"><span class="badge bg-success">6,7</span></td>
+                                <td class="text-center" data-label="TRẠNG THÁI"><span class="badge bg-success">Đạt</span></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center" data-label="STT">4</td>
+                                <td class="text-center" data-label="KỲ">0</td>
+                                <td class="text-center" data-label="HỌC KỲ">Spring2024</td>
+                                <td class="text-center" data-label="MÃ MÔN">ENT503</td>
+                                <td class="text-center" data-label="TIÊN QUYẾT">ENT403</td>
+                                <td class="text-center" data-label="MÔN THAY THẾ">-</td>
+                                <td data-label="TÊN MÔN">Summit 2</td>
+                                <td class="text-center" data-label="TÍN CHỈ">0</td>
+                                <td class="text-center" data-label="ĐIỂM"><span class="badge bg-success">6,7</span></td>
+                                <td class="text-center" data-label="TRẠNG THÁI"><span class="badge bg-success">Đạt</span></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center" data-label="STT">5</td>
+                                <td class="text-center" data-label="KỲ">0</td>
+                                <td class="text-center" data-label="HỌC KỲ">Spring2024</td>
+                                <td class="text-center" data-label="MÃ MÔN">GDQP</td>
+                                <td class="text-center" data-label="TIÊN QUYẾT">-</td>
+                                <td class="text-center" data-label="MÔN THAY THẾ">-</td>
+                                <td data-label="TÊN MÔN">Military Education</td>
+                                <td class="text-center" data-label="TÍN CHỈ">0</td>
+                                <td class="text-center" data-label="ĐIỂM"><span class="badge bg-success">7,5</span></td>
+                                <td class="text-center" data-label="TRẠNG THÁI"><span class="badge bg-success">Đạt</span></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center" data-label="STT">6</td>
+                                <td class="text-center" data-label="KỲ">0</td>
+                                <td class="text-center" data-label="HỌC KỲ">Spring2024</td>
+                                <td class="text-center" data-label="MÃ MÔN">TMI101</td>
+                                <td class="text-center" data-label="TIÊN QUYẾT">-</td>
+                                <td class="text-center" data-label="MÔN THAY THẾ">DBA103</td>
+                                <td data-label="TÊN MÔN">Traditional musical instrument</td>
+                                <td class="text-center" data-label="TÍN CHỈ">3</td>
+                                <td class="text-center" data-label="ĐIỂM"><span class="badge bg-success">9,4</span></td>
+                                <td class="text-center" data-label="TRẠNG THÁI"><span class="badge bg-success">Đạt</span></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center" data-label="STT">7</td>
+                                <td class="text-center" data-label="KỲ">0</td>
+                                <td class="text-center" data-label="HỌC KỲ">Fall2023</td>
+                                <td class="text-center" data-label="MÃ MÔN">VOV114</td>
+                                <td class="text-center" data-label="TIÊN QUYẾT">-</td>
+                                <td class="text-center" data-label="MÔN THAY THẾ">-</td>
+                                <td data-label="TÊN MÔN">Vovinam 1/3</td>
+                                <td class="text-center" data-label="TÍN CHỈ">2</td>
+                                <td class="text-center" data-label="ĐIỂM"><span class="badge bg-success">6,5</span></td>
+                                <td class="text-center" data-label="TRẠNG THÁI"><span class="badge bg-success">Đạt</span></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center" data-label="STT">8</td>
+                                <td class="text-center" data-label="KỲ">0</td>
+                                <td class="text-center" data-label="HỌC KỲ">Spring2024</td>
+                                <td class="text-center" data-label="MÃ MÔN">VOV124</td>
+                                <td class="text-center" data-label="TIÊN QUYẾT">VOV114</td>
+                                <td class="text-center" data-label="MÔN THAY THẾ">-</td>
+                                <td data-label="TÊN MÔN">Vovinam 2/3</td>
+                                <td class="text-center" data-label="TÍN CHỈ">2</td>
+                                <td class="text-center" data-label="ĐIỂM"><span class="badge bg-success">6,4</span></td>
+                                <td class="text-center" data-label="TRẠNG THÁI"><span class="badge bg-success">Đạt</span></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center" data-label="STT">9</td>
+                                <td class="text-center" data-label="KỲ">0</td>
+                                <td class="text-center" data-label="HỌC KỲ">Summer2024</td>
+                                <td class="text-center" data-label="MÃ MÔN">VOV134</td>
+                                <td class="text-center" data-label="TIÊN QUYẾT">VOV124</td>
+                                <td class="text-center" data-label="MÔN THAY THẾ">-</td>
+                                <td data-label="TÊN MÔN">Vovinam 3/3</td>
+                                <td class="text-center" data-label="TÍN CHỈ">2</td>
+                                <td class="text-center" data-label="ĐIỂM"><span class="badge bg-success">8,0</span></td>
+                                <td class="text-center" data-label="TRẠNG THÁI"><span class="badge bg-success">Đạt</span></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center" data-label="STT">10</td>
+                                <td class="text-center" data-label="KỲ">1</td>
+                                <td class="text-center" data-label="HỌC KỲ">Summer2024</td>
+                                <td class="text-center" data-label="MÃ MÔN">CEA201</td>
+                                <td class="text-center" data-label="TIÊN QUYẾT">-</td>
+                                <td class="text-center" data-label="MÔN THAY THẾ">-</td>
+                                <td data-label="TÊN MÔN">Computer Organization and Architecture</td>
+                                <td class="text-center" data-label="TÍN CHỈ">3</td>
+                                <td class="text-center" data-label="ĐIỂM"><span class="badge bg-success">8,0</span></td>
+                                <td class="text-center" data-label="TRẠNG THÁI"><span class="badge bg-success">Đạt</span></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center" data-label="STT">11</td>
+                                <td class="text-center" data-label="KỲ">1</td>
+                                <td class="text-center" data-label="HỌC KỲ">Summer2024</td>
+                                <td class="text-center" data-label="MÃ MÔN">CSI106</td>
+                                <td class="text-center" data-label="TIÊN QUYẾT">-</td>
+                                <td class="text-center" data-label="MÔN THAY THẾ">-</td>
+                                <td data-label="TÊN MÔN">Introduction to Computer Science</td>
+                                <td class="text-center" data-label="TÍN CHỈ">3</td>
+                                <td class="text-center" data-label="ĐIỂM"><span class="badge bg-success">7,6</span></td>
+                                <td class="text-center" data-label="TRẠNG THÁI"><span class="badge bg-success">Đạt</span></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center" data-label="STT">12</td>
+                                <td class="text-center" data-label="KỲ">1</td>
+                                <td class="text-center" data-label="HỌC KỲ">Summer2024</td>
+                                <td class="text-center" data-label="MÃ MÔN">MAE101</td>
+                                <td class="text-center" data-label="TIÊN QUYẾT">-</td>
+                                <td class="text-center" data-label="MÔN THAY THẾ">-</td>
+                                <td data-label="TÊN MÔN">Mathematics for Engineering</td>
+                                <td class="text-center" data-label="TÍN CHỈ">3</td>
+                                <td class="text-center" data-label="ĐIỂM"><span class="badge bg-success">7,4</span></td>
+                                <td class="text-center" data-label="TRẠNG THÁI"><span class="badge bg-success">Đạt</span></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center" data-label="STT">13</td>
+                                <td class="text-center" data-label="KỲ">1</td>
+                                <td class="text-center" data-label="HỌC KỲ">Summer2024</td>
+                                <td class="text-center" data-label="MÃ MÔN">PRF192</td>
+                                <td class="text-center" data-label="TIÊN QUYẾT">-</td>
+                                <td class="text-center" data-label="MÔN THAY THẾ">-</td>
+                                <td data-label="TÊN MÔN">Programming Fundamentals</td>
+                                <td class="text-center" data-label="TÍN CHỈ">3</td>
+                                <td class="text-center" data-label="ĐIỂM"><span class="badge bg-success">9,0</span></td>
+                                <td class="text-center" data-label="TRẠNG THÁI"><span class="badge bg-success">Đạt</span></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center" data-label="STT">14</td>
+                                <td class="text-center" data-label="KỲ">1</td>
+                                <td class="text-center" data-label="HỌC KỲ">Summer2024</td>
+                                <td class="text-center" data-label="MÃ MÔN">SSL101c</td>
+                                <td class="text-center" data-label="TIÊN QUYẾT">-</td>
+                                <td class="text-center" data-label="MÔN THAY THẾ">-</td>
+                                <td data-label="TÊN MÔN">Academic Skills for University Success</td>
+                                <td class="text-center" data-label="TÍN CHỈ">3</td>
+                                <td class="text-center" data-label="ĐIỂM"><span class="badge bg-success">7,0</span></td>
+                                <td class="text-center" data-label="TRẠNG THÁI"><span class="badge bg-success">Đạt</span></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center" data-label="STT">15</td>
+                                <td class="text-center" data-label="KỲ">2</td>
+                                <td class="text-center" data-label="HỌC KỲ">Fall2024</td>
+                                <td class="text-center" data-label="MÃ MÔN">MAD101</td>
+                                <td class="text-center" data-label="TIÊN QUYẾT">-</td>
+                                <td class="text-center" data-label="MÔN THAY THẾ">-</td>
+                                <td data-label="TÊN MÔN">Discrete mathematics</td>
+                                <td class="text-center" data-label="TÍN CHỈ">3</td>
+                                <td class="text-center" data-label="ĐIỂM"><span class="badge bg-success">8,0</span></td>
+                                <td class="text-center" data-label="TRẠNG THÁI"><span class="badge bg-success">Đạt</span></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center" data-label="STT">16</td>
+                                <td class="text-center" data-label="KỲ">2</td>
+                                <td class="text-center" data-label="HỌC KỲ">Fall2024</td>
+                                <td class="text-center" data-label="MÃ MÔN">NWC204</td>
+                                <td class="text-center" data-label="TIÊN QUYẾT">-</td>
+                                <td class="text-center" data-label="MÔN THAY THẾ">-</td>
+                                <td data-label="TÊN MÔN">Computer Networking</td>
+                                <td class="text-center" data-label="TÍN CHỈ">3</td>
+                                <td class="text-center" data-label="ĐIỂM"><span class="badge bg-success">8,1</span></td>
+                                <td class="text-center" data-label="TRẠNG THÁI"><span class="badge bg-success">Đạt</span></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center" data-label="STT">17</td>
+                                <td class="text-center" data-label="KỲ">2</td>
+                                <td class="text-center" data-label="HỌC KỲ">Fall2024</td>
+                                <td class="text-center" data-label="MÃ MÔN">OSG202</td>
+                                <td class="text-center" data-label="TIÊN QUYẾT">-</td>
+                                <td class="text-center" data-label="MÔN THAY THẾ">-</td>
+                                <td data-label="TÊN MÔN">Operating Systems</td>
+                                <td class="text-center" data-label="TÍN CHỈ">3</td>
+                                <td class="text-center" data-label="ĐIỂM"><span class="badge bg-success">7,8</span></td>
+                                <td class="text-center" data-label="TRẠNG THÁI"><span class="badge bg-success">Đạt</span></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center" data-label="STT">18</td>
+                                <td class="text-center" data-label="KỲ">2</td>
+                                <td class="text-center" data-label="HỌC KỲ">Fall2024</td>
+                                <td class="text-center" data-label="MÃ MÔN">PRO192</td>
+                                <td class="text-center" data-label="TIÊN QUYẾT">PRF192</td>
+                                <td class="text-center" data-label="MÔN THAY THẾ">-</td>
+                                <td data-label="TÊN MÔN">Object-Oriented Programming</td>
+                                <td class="text-center" data-label="TÍN CHỈ">3</td>
+                                <td class="text-center" data-label="ĐIỂM"><span class="badge bg-success">8,6</span></td>
+                                <td class="text-center" data-label="TRẠNG THÁI"><span class="badge bg-success">Đạt</span></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center" data-label="STT">19</td>
+                                <td class="text-center" data-label="KỲ">2</td>
+                                <td class="text-center" data-label="HỌC KỲ">Fall2024</td>
+                                <td class="text-center" data-label="MÃ MÔN">SSG104</td>
+                                <td class="text-center" data-label="TIÊN QUYẾT">-</td>
+                                <td class="text-center" data-label="MÔN THAY THẾ">-</td>
+                                <td data-label="TÊN MÔN">Communication and In-Group Working Skills</td>
+                                <td class="text-center" data-label="TÍN CHỈ">3</td>
+                                <td class="text-center" data-label="ĐIỂM"><span class="badge bg-success">8,3</span></td>
+                                <td class="text-center" data-label="TRẠNG THÁI"><span class="badge bg-success">Đạt</span></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center" data-label="STT">20</td>
+                                <td class="text-center" data-label="KỲ">3</td>
+                                <td class="text-center" data-label="HỌC KỲ">Spring2025</td>
+                                <td class="text-center" data-label="MÃ MÔN">CSD201</td>
+                                <td class="text-center" data-label="TIÊN QUYẾT">PRO192 / PRO192c</td>
+                                <td class="text-center" data-label="MÔN THAY THẾ">-</td>
+                                <td data-label="TÊN MÔN">Data Structures and Algorithms</td>
+                                <td class="text-center" data-label="TÍN CHỈ">3</td>
+                                <td class="text-center" data-label="ĐIỂM"><span class="badge bg-success">9,3</span></td>
+                                <td class="text-center" data-label="TRẠNG THÁI"><span class="badge bg-success">Đạt</span></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center" data-label="STT">21</td>
+                                <td class="text-center" data-label="KỲ">3</td>
+                                <td class="text-center" data-label="HỌC KỲ">Spring2025</td>
+                                <td class="text-center" data-label="MÃ MÔN">DBI202</td>
+                                <td class="text-center" data-label="TIÊN QUYẾT">-</td>
+                                <td class="text-center" data-label="MÔN THAY THẾ">-</td>
+                                <td data-label="TÊN MÔN">Introduction to Databases</td>
+                                <td class="text-center" data-label="TÍN CHỈ">3</td>
+                                <td class="text-center" data-label="ĐIỂM"><span class="badge bg-success">9,6</span></td>
+                                <td class="text-center" data-label="TRẠNG THÁI"><span class="badge bg-success">Đạt</span></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center" data-label="STT">22</td>
+                                <td class="text-center" data-label="KỲ">3</td>
+                                <td class="text-center" data-label="HỌC KỲ">Spring2025</td>
+                                <td class="text-center" data-label="MÃ MÔN">JPD113</td>
+                                <td class="text-center" data-label="TIÊN QUYẾT">-</td>
+                                <td class="text-center" data-label="MÔN THAY THẾ">-</td>
+                                <td data-label="TÊN MÔN">Elementary Japanese 1- A1.1</td>
+                                <td class="text-center" data-label="TÍN CHỈ">3</td>
+                                <td class="text-center" data-label="ĐIỂM"><span class="badge bg-success">9,5</span></td>
+                                <td class="text-center" data-label="TRẠNG THÁI"><span class="badge bg-success">Đạt</span></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center" data-label="STT">23</td>
+                                <td class="text-center" data-label="KỲ">3</td>
+                                <td class="text-center" data-label="HỌC KỲ">Spring2025</td>
+                                <td class="text-center" data-label="MÃ MÔN">LAB211</td>
+                                <td class="text-center" data-label="TIÊN QUYẾT">PRO192 / PRO192c</td>
+                                <td class="text-center" data-label="MÔN THAY THẾ">-</td>
+                                <td data-label="TÊN MÔN">OOP with Java Lab</td>
+                                <td class="text-center" data-label="TÍN CHỈ">3</td>
+                                <td class="text-center" data-label="ĐIỂM"><span>-</span></td>
+                                <td class="text-center" data-label="TRẠNG THÁI"><span class="badge bg-success">Đạt</span></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center" data-label="STT">24</td>
+                                <td class="text-center" data-label="KỲ">3</td>
+                                <td class="text-center" data-label="HỌC KỲ">Spring2025</td>
+                                <td class="text-center" data-label="MÃ MÔN">WED201c</td>
+                                <td class="text-center" data-label="TIÊN QUYẾT">-</td>
+                                <td class="text-center" data-label="MÔN THAY THẾ">-</td>
+                                <td data-label="TÊN MÔN">Web Design</td>
+                                <td class="text-center" data-label="TÍN CHỈ">3</td>
+                                <td class="text-center" data-label="ĐIỂM"><span class="badge bg-success">10,0</span></td>
+                                <td class="text-center" data-label="TRẠNG THÁI"><span class="badge bg-success">Đạt</span></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center" data-label="STT">25</td>
+                                <td class="text-center" data-label="KỲ">4</td>
+                                <td class="text-center" data-label="HỌC KỲ">Summer2025</td>
+                                <td class="text-center" data-label="MÃ MÔN">IOT102</td>
+                                <td class="text-center" data-label="TIÊN QUYẾT">-</td>
+                                <td class="text-center" data-label="MÔN THAY THẾ">-</td>
+                                <td data-label="TÊN MÔN">Internet of Things</td>
+                                <td class="text-center" data-label="TÍN CHỈ">3</td>
+                                <td class="text-center" data-label="ĐIỂM"><span class="badge bg-success">8,8</span></td>
+                                <td class="text-center" data-label="TRẠNG THÁI"><span class="badge bg-success">Đạt</span></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center" data-label="STT">26</td>
+                                <td class="text-center" data-label="KỲ">4</td>
+                                <td class="text-center" data-label="HỌC KỲ">Summer2025</td>
+                                <td class="text-center" data-label="MÃ MÔN">JPD123</td>
+                                <td class="text-center" data-label="TIÊN QUYẾT">JPD113</td>
+                                <td class="text-center" data-label="MÔN THAY THẾ">-</td>
+                                <td data-label="TÊN MÔN">Elementary Japanese 1-A1.2</td>
+                                <td class="text-center" data-label="TÍN CHỈ">3</td>
+                                <td class="text-center" data-label="ĐIỂM"><span class="badge bg-success">9,8</span></td>
+                                <td class="text-center" data-label="TRẠNG THÁI"><span class="badge bg-success">Đạt</span></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center" data-label="STT">27</td>
+                                <td class="text-center" data-label="KỲ">4</td>
+                                <td class="text-center" data-label="HỌC KỲ">Summer2025</td>
+                                <td class="text-center" data-label="MÃ MÔN">MAS291</td>
+                                <td class="text-center" data-label="TIÊN QUYẾT">MAC101 / MAE101</td>
+                                <td class="text-center" data-label="MÔN THAY THẾ">-</td>
+                                <td data-label="TÊN MÔN">Statistics &amp; Probability</td>
+                                <td class="text-center" data-label="TÍN CHỈ">3</td>
+                                <td class="text-center" data-label="ĐIỂM"><span class="badge bg-success">8,6</span></td>
+                                <td class="text-center" data-label="TRẠNG THÁI"><span class="badge bg-success">Đạt</span></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center" data-label="STT">28</td>
+                                <td class="text-center" data-label="KỲ">4</td>
+                                <td class="text-center" data-label="HỌC KỲ">Summer2025</td>
+                                <td class="text-center" data-label="MÃ MÔN">PRJ301</td>
+                                <td class="text-center" data-label="TIÊN QUYẾT">DBI202, PRO192</td>
+                                <td class="text-center" data-label="MÔN THAY THẾ">-</td>
+                                <td data-label="TÊN MÔN">Java Web Application Development</td>
+                                <td class="text-center" data-label="TÍN CHỈ">3</td>
+                                <td class="text-center" data-label="ĐIỂM"><span class="badge bg-success">8,9</span></td>
+                                <td class="text-center" data-label="TRẠNG THÁI"><span class="badge bg-success">Đạt</span></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center" data-label="STT">29</td>
+                                <td class="text-center" data-label="KỲ">4</td>
+                                <td class="text-center" data-label="HỌC KỲ">Summer2025</td>
+                                <td class="text-center" data-label="MÃ MÔN">SWE201c</td>
+                                <td class="text-center" data-label="TIÊN QUYẾT">-</td>
+                                <td class="text-center" data-label="MÔN THAY THẾ">-</td>
+                                <td data-label="TÊN MÔN">Introduction to Software Engineering</td>
+                                <td class="text-center" data-label="TÍN CHỈ">3</td>
+                                <td class="text-center" data-label="ĐIỂM"><span class="badge bg-success">9,2</span></td>
+                                <td class="text-center" data-label="TRẠNG THÁI"><span class="badge bg-success">Đạt</span></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center" data-label="STT">30</td>
+                                <td class="text-center" data-label="KỲ">5</td>
+                                <td class="text-center" data-label="HỌC KỲ">Fall2025</td>
+                                <td class="text-center" data-label="MÃ MÔN">PRN212</td>
+                                <td class="text-center" data-label="TIÊN QUYẾT">DBI202, PRO192 / PRO192c</td>
+                                <td class="text-center" data-label="MÔN THAY THẾ">-</td>
+                                <td data-label="TÊN MÔN">Basic Cross-Platform Application Programming With .NET</td>
+                                <td class="text-center" data-label="TÍN CHỈ">3</td>
+                                <td class="text-center" data-label="ĐIỂM"><span class="badge bg-success">8,8</span></td>
+                                <td class="text-center" data-label="TRẠNG THÁI"><span class="badge bg-success">Đạt</span></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center" data-label="STT">31</td>
+                                <td class="text-center" data-label="KỲ">5</td>
+                                <td class="text-center" data-label="HỌC KỲ">Fall2025</td>
+                                <td class="text-center" data-label="MÃ MÔN">SWP391</td>
+                                <td class="text-center" data-label="TIÊN QUYẾT">LAB211, PRJ301, SWE201c / LAB211, PRJ301, SWE202c</td>
+                                <td class="text-center" data-label="MÔN THAY THẾ">-</td>
+                                <td data-label="TÊN MÔN">Software development project</td>
+                                <td class="text-center" data-label="TÍN CHỈ">3</td>
+                                <td class="text-center" data-label="ĐIỂM"><span class="badge bg-success">8,2</span></td>
+                                <td class="text-center" data-label="TRẠNG THÁI"><span class="badge bg-success">Đạt</span></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center" data-label="STT">32</td>
+                                <td class="text-center" data-label="KỲ">5</td>
+                                <td class="text-center" data-label="HỌC KỲ">Fall2025</td>
+                                <td class="text-center" data-label="MÃ MÔN">SWR302</td>
+                                <td class="text-center" data-label="TIÊN QUYẾT">SWE102 / SWE201 / SWE202c</td>
+                                <td class="text-center" data-label="MÔN THAY THẾ">-</td>
+                                <td data-label="TÊN MÔN">Software Requirement</td>
+                                <td class="text-center" data-label="TÍN CHỈ">3</td>
+                                <td class="text-center" data-label="ĐIỂM"><span class="badge bg-success">8,2</span></td>
+                                <td class="text-center" data-label="TRẠNG THÁI"><span class="badge bg-success">Đạt</span></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center" data-label="STT">33</td>
+                                <td class="text-center" data-label="KỲ">5</td>
+                                <td class="text-center" data-label="HỌC KỲ">Fall2025</td>
+                                <td class="text-center" data-label="MÃ MÔN">SWT301</td>
+                                <td class="text-center" data-label="TIÊN QUYẾT">SWE102 / SWE201 / SWE202c</td>
+                                <td class="text-center" data-label="MÔN THAY THẾ">-</td>
+                                <td data-label="TÊN MÔN">Software Testing</td>
+                                <td class="text-center" data-label="TÍN CHỈ">3</td>
+                                <td class="text-center" data-label="ĐIỂM"><span class="badge bg-success">7,6</span></td>
+                                <td class="text-center" data-label="TRẠNG THÁI"><span class="badge bg-success">Đạt</span></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center" data-label="STT">34</td>
+                                <td class="text-center" data-label="KỲ">5</td>
+                                <td class="text-center" data-label="HỌC KỲ">Fall2025</td>
+                                <td class="text-center" data-label="MÃ MÔN">WDU203c</td>
+                                <td class="text-center" data-label="TIÊN QUYẾT">-</td>
+                                <td class="text-center" data-label="MÔN THAY THẾ">-</td>
+                                <td data-label="TÊN MÔN">UI/UX Design</td>
+                                <td class="text-center" data-label="TÍN CHỈ">3</td>
+                                <td class="text-center" data-label="ĐIỂM"><span class="badge bg-success">10,0</span></td>
+                                <td class="text-center" data-label="TRẠNG THÁI"><span class="badge bg-success">Đạt</span></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center" data-label="STT">35</td>
+                                <td class="text-center" data-label="KỲ">6</td>
+                                <td class="text-center" data-label="HỌC KỲ">Spring2026</td>
+                                <td class="text-center" data-label="MÃ MÔN">ENW493c</td>
+                                <td class="text-center" data-label="TIÊN QUYẾT">-</td>
+                                <td class="text-center" data-label="MÔN THAY THẾ">-</td>
+                                <td data-label="TÊN MÔN">Research Methods &amp; Academic Writing Skills</td>
+                                <td class="text-center" data-label="TÍN CHỈ">3</td>
+                                <td class="text-center" data-label="ĐIỂM"><span class="badge bg-success">7,6</span></td>
+                                <td class="text-center" data-label="TRẠNG THÁI"><span class="badge bg-success">Đạt</span></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center" data-label="STT">36</td>
+                                <td class="text-center" data-label="KỲ">6</td>
+                                <td class="text-center" data-label="HỌC KỲ">Spring2026</td>
+                                <td class="text-center" data-label="MÃ MÔN">OJT202</td>
+                                <td class="text-center" data-label="TIÊN QUYẾT">-</td>
+                                <td class="text-center" data-label="MÔN THAY THẾ">-</td>
+                                <td data-label="TÊN MÔN">On-The-Job Training</td>
+                                <td class="text-center" data-label="TÍN CHỈ">10</td>
+                                <td class="text-center" data-label="ĐIỂM"><span class="badge bg-success">6,4</span></td>
+                                <td class="text-center" data-label="TRẠNG THÁI"><span class="badge bg-success">Đạt</span></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center" data-label="STT">37</td>
+                                <td class="text-center" data-label="KỲ">7</td>
+                                <td class="text-center" data-label="HỌC KỲ">Summer2026</td>
+                                <td class="text-center" data-label="MÃ MÔN">EXE101</td>
+                                <td class="text-center" data-label="TIÊN QUYẾT">-</td>
+                                <td class="text-center" data-label="MÔN THAY THẾ">-</td>
+                                <td data-label="TÊN MÔN">Experiential Entrepreneurship 1</td>
+                                <td class="text-center" data-label="TÍN CHỈ">3</td>
+                                <td class="text-center" data-label="ĐIỂM"><span class="badge bg-success">8,9</span></td>
+                                <td class="text-center" data-label="TRẠNG THÁI"><span class="badge bg-success">Đạt</span></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center" data-label="STT">38</td>
+                                <td class="text-center" data-label="KỲ">7</td>
+                                <td class="text-center" data-label="HỌC KỲ">Summer2026</td>
+                                <td class="text-center" data-label="MÃ MÔN">PMG201c</td>
+                                <td class="text-center" data-label="TIÊN QUYẾT">-</td>
+                                <td class="text-center" data-label="MÔN THAY THẾ">-</td>
+                                <td data-label="TÊN MÔN">Project Management</td>
+                                <td class="text-center" data-label="TÍN CHỈ">3</td>
+                                <td class="text-center" data-label="ĐIỂM"><span class="badge bg-success">7,1</span></td>
+                                <td class="text-center" data-label="TRẠNG THÁI"><span class="badge bg-success">Đạt</span></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center" data-label="STT">39</td>
+                                <td class="text-center" data-label="KỲ">7</td>
+                                <td class="text-center" data-label="HỌC KỲ">Summer2026</td>
+                                <td class="text-center" data-label="MÃ MÔN">PRN222</td>
+                                <td class="text-center" data-label="TIÊN QUYẾT">PRN212</td>
+                                <td class="text-center" data-label="MÔN THAY THẾ">-</td>
+                                <td data-label="TÊN MÔN">Advanced Cross-Platform Application Programming With .NET</td>
+                                <td class="text-center" data-label="TÍN CHỈ">3</td>
+                                <td class="text-center" data-label="ĐIỂM"><span class="badge bg-success">7,6</span></td>
+                                <td class="text-center" data-label="TRẠNG THÁI"><span class="badge bg-success">Đạt</span></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center" data-label="STT">40</td>
+                                <td class="text-center" data-label="KỲ">7</td>
+                                <td class="text-center" data-label="HỌC KỲ">Summer2026</td>
+                                <td class="text-center" data-label="MÃ MÔN">PRU213</td>
+                                <td class="text-center" data-label="TIÊN QUYẾT">PRO192 / PRO192c</td>
+                                <td class="text-center" data-label="MÔN THAY THẾ">-</td>
+                                <td data-label="TÊN MÔN">Game Programming with C#</td>
+                                <td class="text-center" data-label="TÍN CHỈ">3</td>
+                                <td class="text-center" data-label="ĐIỂM"><span class="badge bg-success">8,9</span></td>
+                                <td class="text-center" data-label="TRẠNG THÁI"><span class="badge bg-success">Đạt</span></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center" data-label="STT">41</td>
+                                <td class="text-center" data-label="KỲ">7</td>
+                                <td class="text-center" data-label="HỌC KỲ">Summer2026</td>
+                                <td class="text-center" data-label="MÃ MÔN">SWD392</td>
+                                <td class="text-center" data-label="TIÊN QUYẾT">PRO192, SWE201c</td>
+                                <td class="text-center" data-label="MÔN THAY THẾ">-</td>
+                                <td data-label="TÊN MÔN">Software Architecture and Design</td>
+                                <td class="text-center" data-label="TÍN CHỈ">3</td>
+                                <td class="text-center" data-label="ĐIỂM"><span class="badge bg-success">8,2</span></td>
+                                <td class="text-center" data-label="TRẠNG THÁI"><span class="badge bg-success">Đạt</span></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center" data-label="STT">42</td>
+                                <td class="text-center" data-label="KỲ">8</td>
+                                <td class="text-center" data-label="HỌC KỲ">Fall2026</td>
+                                <td class="text-center" data-label="MÃ MÔN">EXE201</td>
+                                <td class="text-center" data-label="TIÊN QUYẾT">EXE101</td>
+                                <td class="text-center" data-label="MÔN THAY THẾ">-</td>
+                                <td data-label="TÊN MÔN">Experiential Entrepreneurship 2</td>
+                                <td class="text-center" data-label="TÍN CHỈ">3</td>
+                                <td class="text-center" data-label="ĐIỂM"><span>-</span></td>
+                                <td class="text-center" data-label="TRẠNG THÁI"><span class="badge bg-info">Đang học</span></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center" data-label="STT">43</td>
+                                <td class="text-center" data-label="KỲ">8</td>
+                                <td class="text-center" data-label="HỌC KỲ">Fall2026</td>
+                                <td class="text-center" data-label="MÃ MÔN">ITE302c</td>
+                                <td class="text-center" data-label="TIÊN QUYẾT">-</td>
+                                <td class="text-center" data-label="MÔN THAY THẾ">-</td>
+                                <td data-label="TÊN MÔN">Ethics in IT</td>
+                                <td class="text-center" data-label="TÍN CHỈ">3</td>
+                                <td class="text-center" data-label="ĐIỂM"><span>-</span></td>
+                                <td class="text-center" data-label="TRẠNG THÁI"><span class="badge bg-info">Đang học</span></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center" data-label="STT">44</td>
+                                <td class="text-center" data-label="KỲ">8</td>
+                                <td class="text-center" data-label="HỌC KỲ">Fall2026</td>
+                                <td class="text-center" data-label="MÃ MÔN">MLN111</td>
+                                <td class="text-center" data-label="TIÊN QUYẾT">-</td>
+                                <td class="text-center" data-label="MÔN THAY THẾ">-</td>
+                                <td data-label="TÊN MÔN">Philosophy of Marxism – Leninism</td>
+                                <td class="text-center" data-label="TÍN CHỈ">3</td>
+                                <td class="text-center" data-label="ĐIỂM"><span class="badge bg-success">8,6</span></td>
+                                <td class="text-center" data-label="TRẠNG THÁI"><span class="badge bg-success">Đạt</span></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center" data-label="STT">45</td>
+                                <td class="text-center" data-label="KỲ">8</td>
+                                <td class="text-center" data-label="HỌC KỲ">Fall2026</td>
+                                <td class="text-center" data-label="MÃ MÔN">MLN122</td>
+                                <td class="text-center" data-label="TIÊN QUYẾT">-</td>
+                                <td class="text-center" data-label="MÔN THAY THẾ">-</td>
+                                <td data-label="TÊN MÔN">Political economics of Marxism – Leninism</td>
+                                <td class="text-center" data-label="TÍN CHỈ">2</td>
+                                <td class="text-center" data-label="ĐIỂM"><span>-</span></td>
+                                <td class="text-center" data-label="TRẠNG THÁI"><span class="badge bg-info">Đang học</span></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center" data-label="STT">46</td>
+                                <td class="text-center" data-label="KỲ">8</td>
+                                <td class="text-center" data-label="HỌC KỲ">Fall2026</td>
+                                <td class="text-center" data-label="MÃ MÔN">PRM393</td>
+                                <td class="text-center" data-label="TIÊN QUYẾT">PRO192</td>
+                                <td class="text-center" data-label="MÔN THAY THẾ">-</td>
+                                <td data-label="TÊN MÔN">Mobile Programming</td>
+                                <td class="text-center" data-label="TÍN CHỈ">3</td>
+                                <td class="text-center" data-label="ĐIỂM"><span>-</span></td>
+                                <td class="text-center" data-label="TRẠNG THÁI"><span class="badge bg-info">Đang học</span></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center" data-label="STT">47</td>
+                                <td class="text-center" data-label="KỲ">8</td>
+                                <td class="text-center" data-label="HỌC KỲ">Fall2026</td>
+                                <td class="text-center" data-label="MÃ MÔN">PRN232</td>
+                                <td class="text-center" data-label="TIÊN QUYẾT">PRN221 / PRN222</td>
+                                <td class="text-center" data-label="MÔN THAY THẾ">-</td>
+                                <td data-label="TÊN MÔN">Xây dựng ứng dụng back-end với With .NET</td>
+                                <td class="text-center" data-label="TÍN CHỈ">3</td>
+                                <td class="text-center" data-label="ĐIỂM"><span>-</span></td>
+                                <td class="text-center" data-label="TRẠNG THÁI"><span class="badge bg-info">Đang học</span></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center" data-label="STT">48</td>
+                                <td class="text-center" data-label="KỲ">9</td>
+                                <td class="text-center" data-label="HỌC KỲ">-</td>
+                                <td class="text-center" data-label="MÃ MÔN">HCM202</td>
+                                <td class="text-center" data-label="TIÊN QUYẾT">MLN111, MLN122</td>
+                                <td class="text-center" data-label="MÔN THAY THẾ">-</td>
+                                <td data-label="TÊN MÔN">HCM Ideology</td>
+                                <td class="text-center" data-label="TÍN CHỈ">2</td>
+                                <td class="text-center" data-label="ĐIỂM"><span>-</span></td>
+                                <td class="text-center" data-label="TRẠNG THÁI"><span>-</span></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center" data-label="STT">49</td>
+                                <td class="text-center" data-label="KỲ">9</td>
+                                <td class="text-center" data-label="HỌC KỲ">-</td>
+                                <td class="text-center" data-label="MÃ MÔN">MLN131</td>
+                                <td class="text-center" data-label="TIÊN QUYẾT">MLN111, MLN122</td>
+                                <td class="text-center" data-label="MÔN THAY THẾ">-</td>
+                                <td data-label="TÊN MÔN">Scientific socialism</td>
+                                <td class="text-center" data-label="TÍN CHỈ">2</td>
+                                <td class="text-center" data-label="ĐIỂM"><span>-</span></td>
+                                <td class="text-center" data-label="TRẠNG THÁI"><span>-</span></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center" data-label="STT">50</td>
+                                <td class="text-center" data-label="KỲ">9</td>
+                                <td class="text-center" data-label="HỌC KỲ">-</td>
+                                <td class="text-center" data-label="MÃ MÔN">SE_GRA_ELE</td>
+                                <td class="text-center" data-label="TIÊN QUYẾT">-</td>
+                                <td class="text-center" data-label="MÔN THAY THẾ">-</td>
+                                <td data-label="TÊN MÔN">Graduation Elective - Software Engineering</td>
+                                <td class="text-center" data-label="TÍN CHỈ">10</td>
+                                <td class="text-center" data-label="ĐIỂM"><span>-</span></td>
+                                <td class="text-center" data-label="TRẠNG THÁI"><span>-</span></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center" data-label="STT">51</td>
+                                <td class="text-center" data-label="KỲ">9</td>
+                                <td class="text-center" data-label="HỌC KỲ">-</td>
+                                <td class="text-center" data-label="MÃ MÔN">VNR202</td>
+                                <td class="text-center" data-label="TIÊN QUYẾT">MLN111, MLN122</td>
+                                <td class="text-center" data-label="MÔN THAY THẾ">-</td>
+                                <td data-label="TÊN MÔN">History of CPV</td>
+                                <td class="text-center" data-label="TÍN CHỈ">2</td>
+                                <td class="text-center" data-label="ĐIỂM"><span>-</span></td>
+                                <td class="text-center" data-label="TRẠNG THÁI"><span>-</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script test directly in browser without loading as extension -->
+    <script src="content.js"></script>
+</body>
+</html>

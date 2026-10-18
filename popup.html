@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAP GPA Calculator</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <!-- Header -->
+    <header class="popup-header">
+      <div class="brand">
+        <img src="icons/icon48.png" alt="Logo" class="logo">
+        <div>
+          <h1 class="title">FAP GPA Calculator</h1>
+          <span class="subtitle">FPT University Assistant</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="popup-body">
+      <!-- State 1: Active on Transcript page -->
+      <div id="active-state" class="state-container" style="display: none;">
+        <div class="kpi-grid">
+          <div class="kpi-box primary">
+            <span class="kpi-label">GPA (Hệ 10)</span>
+            <span class="kpi-value" id="val-gpa10">--</span>
+          </div>
+          <div class="kpi-box success">
+            <span class="kpi-label">GPA (Hệ 4)</span>
+            <span class="kpi-value" id="val-gpa4">--</span>
+          </div>
+        </div>
+
+        <div class="info-list">
+          <div class="info-row">
+            <span class="info-label">🏆 Xếp loại:</span>
+            <span class="info-value badge" id="val-classification">--</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">📚 Tín chỉ đạt:</span>
+            <span class="info-value" id="val-credits">--</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">🎯 Tín chỉ tính điểm:</span>
+            <span class="info-value" id="val-graded-credits">--</span>
+          </div>
+        </div>
+
+        <div class="actions-group">
+          <button type="button" class="btn btn-primary" id="btn-copy">
+            📋 Sao chép báo cáo GPA
+          </button>
+          <button type="button" class="btn btn-secondary" id="btn-scroll">
+            🔍 Xem chi tiết trên trang
+          </button>
+        </div>
+      </div>
+
+      <!-- State 2: Not on Transcript page -->
+      <div id="inactive-state" class="state-container">
+        <div class="inactive-card">
+          <div class="inactive-icon">🎓</div>
+          <h3>Chưa mở Bảng điểm FAP</h3>
+          <p>Mở trang <strong>Báo cáo bảng điểm</strong> trên FAP để tiện ích tự động tính điểm GPA và tín chỉ cho bạn.</p>
+          <button type="button" class="btn btn-primary" id="btn-open-fap">
+            🚀 Mở Bảng Điểm FAP
+          </button>
+        </div>
+
+        <div class="feature-pills">
+          <div class="pill">✨ Tự động tính GPA hệ 10 & 4</div>
+          <div class="pill">⚡ Tuỳ chọn bỏ Thể chất / OJT</div>
+          <div class="pill">🔮 Dự đoán điểm tốt nghiệp</div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="popup-footer">
+      <span>Dành riêng cho sinh viên Đại học FPT</span>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

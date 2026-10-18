@@ -1,0 +1,411 @@
+/* FAP GPA Calculator Extension Stylesheet */
+
+:root {
+  --fgpa-primary: #f26f21;
+  --fgpa-primary-hover: #d45912;
+  --fgpa-primary-light: #fff5ee;
+  --fgpa-success: #10b981;
+  --fgpa-info: #0284c7;
+  --fgpa-warning: #f59e0b;
+  --fgpa-danger: #ef4444;
+  --fgpa-card-bg: #ffffff;
+  --fgpa-card-border: #e2e8f0;
+  --fgpa-text-main: #1e293b;
+  --fgpa-text-muted: #64748b;
+  --fgpa-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.08);
+}
+
+[data-bs-theme="dark"] :root,
+body.dark-mode :root,
+body[data-layout-mode="dark"] :root {
+  --fgpa-card-bg: #1e293b;
+  --fgpa-card-border: #334155;
+  --fgpa-text-main: #f1f5f9;
+  --fgpa-text-muted: #94a3b8;
+  --fgpa-primary-light: rgba(242, 111, 33, 0.15);
+  --fgpa-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.35);
+}
+
+/* Container Dashboard */
+#fap-gpa-dashboard {
+  background: var(--fgpa-card-bg);
+  border: 1px solid var(--fgpa-card-border);
+  border-radius: 12px;
+  box-shadow: var(--fgpa-shadow);
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+.fgpa-header {
+  background: linear-gradient(135deg, #f26f21 0%, #ff8c42 100%);
+  color: #ffffff;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  user-select: none;
+}
+
+.fgpa-header-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.fgpa-header-badge {
+  background: rgba(255, 255, 255, 0.25);
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.fgpa-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.fgpa-btn-icon {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.fgpa-btn-icon:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+/* Dashboard Body */
+.fgpa-body {
+  padding: 20px;
+  color: var(--fgpa-text-main);
+}
+
+/* KPI Stat Cards Grid */
+.fgpa-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.fgpa-stat-card {
+  background: var(--fgpa-card-bg);
+  border: 1px solid var(--fgpa-card-border);
+  border-radius: 10px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.fgpa-stat-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+}
+
+.fgpa-stat-card.primary::before { background: var(--fgpa-primary); }
+.fgpa-stat-card.success::before { background: var(--fgpa-success); }
+.fgpa-stat-card.info::before { background: var(--fgpa-info); }
+.fgpa-stat-card.warning::before { background: var(--fgpa-warning); }
+
+.fgpa-stat-label {
+  font-size: 0.85rem;
+  color: var(--fgpa-text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fgpa-stat-value {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--fgpa-text-main);
+  margin-bottom: 4px;
+}
+
+.fgpa-stat-card.primary .fgpa-stat-value { color: var(--fgpa-primary); }
+.fgpa-stat-card.success .fgpa-stat-value { color: var(--fgpa-success); }
+.fgpa-stat-card.info .fgpa-stat-value { color: var(--fgpa-info); }
+.fgpa-stat-card.warning .fgpa-stat-value { color: var(--fgpa-warning); }
+
+.fgpa-stat-sub {
+  font-size: 0.8rem;
+  color: var(--fgpa-text-muted);
+}
+
+/* Filters and Toggles Bar */
+.fgpa-controls-bar {
+  background: var(--fgpa-primary-light);
+  border: 1px solid rgba(242, 111, 33, 0.2);
+  border-radius: 8px;
+  padding: 12px 16px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.fgpa-checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+
+.fgpa-checkbox-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--fgpa-text-main);
+  cursor: pointer;
+  user-select: none;
+}
+
+.fgpa-checkbox-label input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--fgpa-primary);
+  cursor: pointer;
+}
+
+.fgpa-btn-action {
+  background: var(--fgpa-primary);
+  color: #fff;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s;
+}
+
+.fgpa-btn-action:hover {
+  background: var(--fgpa-primary-hover);
+  color: #fff;
+}
+
+/* Navigation Tabs */
+.fgpa-tabs {
+  display: flex;
+  border-bottom: 2px solid var(--fgpa-card-border);
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.fgpa-tab-btn {
+  background: none;
+  border: none;
+  padding: 10px 16px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--fgpa-text-muted);
+  cursor: pointer;
+  position: relative;
+  transition: color 0.2s;
+}
+
+.fgpa-tab-btn:hover {
+  color: var(--fgpa-primary);
+}
+
+.fgpa-tab-btn.active {
+  color: var(--fgpa-primary);
+}
+
+.fgpa-tab-btn.active::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--fgpa-primary);
+}
+
+.fgpa-tab-pane {
+  display: none;
+}
+
+.fgpa-tab-pane.active {
+  display: block;
+  animation: fgpaFadeIn 0.25s ease-in-out;
+}
+
+@keyframes fgpaFadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Semester Breakdown Table */
+.fgpa-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+.fgpa-table th {
+  background: rgba(0, 0, 0, 0.03);
+  padding: 10px 12px;
+  font-weight: 600;
+  color: var(--fgpa-text-muted);
+  border-bottom: 2px solid var(--fgpa-card-border);
+  text-align: left;
+}
+
+.fgpa-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--fgpa-card-border);
+  color: var(--fgpa-text-main);
+}
+
+.fgpa-table tr:hover td {
+  background: rgba(242, 111, 33, 0.04);
+}
+
+.fgpa-badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.fgpa-badge-success { background: #dcfce7; color: #166534; }
+.fgpa-badge-primary { background: #ffedd5; color: #9a3412; }
+.fgpa-badge-info { background: #e0f2fe; color: #075985; }
+
+/* Simulator Section */
+.fgpa-simulator-header {
+  background: var(--fgpa-primary-light);
+  border-radius: 8px;
+  padding: 14px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.fgpa-sim-inputs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.fgpa-sim-card {
+  background: var(--fgpa-card-bg);
+  border: 1px solid var(--fgpa-card-border);
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.fgpa-sim-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.fgpa-sim-code {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--fgpa-text-main);
+}
+
+.fgpa-sim-meta {
+  font-size: 0.8rem;
+  color: var(--fgpa-text-muted);
+}
+
+.fgpa-sim-input {
+  width: 70px;
+  padding: 6px 8px;
+  border: 1px solid var(--fgpa-card-border);
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-align: center;
+  background: var(--fgpa-card-bg);
+  color: var(--fgpa-text-main);
+}
+
+.fgpa-sim-input:focus {
+  outline: none;
+  border-color: var(--fgpa-primary);
+  box-shadow: 0 0 0 3px rgba(242, 111, 33, 0.2);
+}
+
+/* Floating Sticky Pill */
+#fap-gpa-floating-pill {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: linear-gradient(135deg, #f26f21 0%, #ff8c42 100%);
+  color: #ffffff;
+  padding: 10px 18px;
+  border-radius: 50px;
+  box-shadow: 0 6px 20px rgba(242, 111, 33, 0.4);
+  font-weight: 700;
+  font-size: 0.92rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  z-index: 9999;
+  transition: all 0.25s ease;
+  user-select: none;
+}
+
+#fap-gpa-floating-pill:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 24px rgba(242, 111, 33, 0.5);
+}
+
+#fap-gpa-floating-pill .fgpa-pill-gpa {
+  background: #ffffff;
+  color: #f26f21;
+  padding: 3px 9px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 800;
+}
